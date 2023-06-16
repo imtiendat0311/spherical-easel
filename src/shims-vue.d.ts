@@ -10,6 +10,9 @@ interface ImportMeta {
     BASE_URL: string;
     VITE_APP_I18N_LOCALE: string
     VITE_APP_I18N_FALLBACK_LOCALE: string
+    VITE_APP_CESIUM_TOKEN: string
+    VITE_APP_FIREBASE_API_KEY: string
+    VITE_APP_GOOGLE_MAP_API_KEY:string
   };
 }
 

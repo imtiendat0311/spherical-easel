@@ -18,6 +18,8 @@ import { watch } from 'vue';
 import { onMounted } from 'vue';
 import { useSEStore } from "@/stores/se";
 import { storeToRefs } from "pinia";
+import { viewDepthKey } from "vue-router";
+import { viewerCesium3DTilesInspectorMixin } from "cesium";
 const prop = defineProps({
     canvasSize: {
         type: Number,
@@ -103,6 +105,7 @@ onMounted(()=>{
         rotationMatrix.copy(inverseTotalRotationMatrix.value).invert();
         earth.setRotationFromMatrix(rotationMatrix);
     },{deep:true})
+
 
 })
 </script>

@@ -1,7 +1,7 @@
 import { defineConfig } from "vite"
 import {resolve} from "path"
 import vue from "@vitejs/plugin-vue"
-
+import cesium from "vite-plugin-cesium"
 // import {createVuePlugin as vue} from "vite-plugin-vue2"
 // import { VuetifyResolver } from "unplugin-vue-components/resolvers"
 // import Components from "unplugin-vue-components/vite"
@@ -17,6 +17,9 @@ export default defineConfig({
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"]
   },
   plugins: [
+    cesium({
+      rebuildCesium: true
+    }),
     vue({
       template: {
         transformAssetUrls,
